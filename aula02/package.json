@@ -1,13 +1,13 @@
 {
   "name": "aula02",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exemplo da aula 2",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rafael Jaques <rafael@phpit.com.br>",
   "license": "ISC",
   "devDependencies": {
     "electron": "^1.4.4"

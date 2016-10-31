@@ -1,3 +1,4 @@
 document.getElementById('testar').addEventListener('click', () => {
-  alert('Tudo funcionando!');
+  // alert('Tudo funcionando!');
+  console.log('Tudo ok!');
 });
