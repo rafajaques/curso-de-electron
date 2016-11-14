@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Modal</title>
+    <script>
+      const {remote} = require('electron');
+    </script>
+  </head>
+  <body>
+    Sou uma modal!
+    <button onclick="remote.getCurrentWindow().close();">Fechar</button>
+  </body>
+</html>
