@@ -8,7 +8,7 @@ app.on('ready', () => {
     height:600,
   });
 
-  janela.loadURL(`file://${__dirname}/index.html`);
+  janela.loadURL(`file://${__dirname}/index4.html`);
 
   /**
    * Exemplo 2
@@ -20,13 +20,28 @@ app.on('ready', () => {
       label: 'Arquivo',
       submenu: [
         {label: 'Abrir'},
-        {label: 'Sair'}
+        {
+          label: 'Sair',
+          role: 'close'
+        }
       ]
     },
     {
       label: 'Editar',
       submenu: [
-        {role: 'undo'}
+        {
+          label: 'Procurar',
+          accelerator: 'CmdOrCtrl+F',
+          click () { console.log('Procurando!'); }
+        },
+        {
+          label: 'Procurar e substituir',
+          accelerator: 'CmdOrCtrl+Shift+F',
+        },
+        {type: 'separator'},
+        {
+          label: 'Item normal'
+        },
       ]
     }
   ];
