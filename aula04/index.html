@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trabalhando com menus</title>
+  </head>
+  <body>
+    <h1>Apenas uma página simples</h1>
+    <p>
+      Aqui vamos trabalhar com menus...
+    </p>
+  </body>
+
+  <script>
+    /**
+     * Exemplo 1
+     * Construção item por item
+     */
+    const remote = require('electron').remote;
+    const Menu = remote.Menu;
+    const MenuItem = remote.MenuItem;
+
+    let meuMenu = new Menu();
+    meuMenu.append(new MenuItem({label: 'Primeiro item', click() { console.log('Clicado!') }}));
+    meuMenu.append(new MenuItem({type: 'separator'}));
+    meuMenu.append(new MenuItem({label: 'Segundo item', type: 'checkbox', checked: true}));
+
+    window.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      meuMenu.popup();
+    }, false);
+
+  </script>
+</html>
