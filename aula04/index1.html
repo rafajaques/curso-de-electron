@@ -19,16 +19,13 @@
     const remote = require('electron').remote;
     const Menu = remote.Menu;
     const MenuItem = remote.MenuItem;
-
     let meuMenu = new Menu();
-    meuMenu.append(new MenuItem({label: 'Primeiro item', click() { console.log('Clicado!') }}));
+    meuMenu.append(new MenuItem({label: 'Primeiro item', click() { console.log('Clicado!');}}));
     meuMenu.append(new MenuItem({type: 'separator'}));
     meuMenu.append(new MenuItem({label: 'Segundo item', type: 'checkbox', checked: true}));
-
     window.addEventListener('contextmenu', (e) => {
       e.preventDefault();
       meuMenu.popup();
     }, false);
-
   </script>
 </html>

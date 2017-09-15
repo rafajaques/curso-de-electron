@@ -10,11 +10,6 @@ app.on('ready', () => {
 
   janela.loadURL(`file://${__dirname}/index3.html`);
 
-  /**
-   * Exemplo 2
-   * Construção via template
-   */
-
   const template = [
     {
       label: 'Arquivo',
